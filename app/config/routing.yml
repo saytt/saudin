@@ -1,0 +1,33 @@
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+    
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+
+    
+cours:
+    path: /cours
+    defaults:
+        _controller: Ressources/default/cours
+
+modifValid:
+    path: modifValid
+    
+login:
+    path: /login
+    defaults:
+        _controller: "@FOSUserBundle/Resources/config/routing/all.xml"
+        
+logout:
+    path: /logout
+update:
+    path: update/{id}
+
+addPhrase:
+    path: addPhrase
+
+  
+        

@@ -1,0 +1,72 @@
+{%extends 'layout.html.twig'%}
+{%block body%}
+    {{parent()}}
+    <div class="col-sm-2 sidenav">
+    </div>
+<div class="col-sm-8 text-left">
+    <div>
+        <p>
+            Les hiraganas (平仮名, ひらがな?, littéralement « kanas lisses ») sont un syllabaire japonais et une des trois écritures du japonais avec les katakanas et les kanjis.
+
+Ils ont été formés par abréviation cursive de kanjis homophones. Ils permettent de transcrire la langue japonaise sans ambigüité, au contraire des kanjis. En effet, chaque hiragana représente une syllabe (techniquement, une more) qui peut être une voyelle seule (comme あ = a) ou une consonne suivie d'une voyelle (comme か = ka) ; il y a également le n syllabique (ん), dont la prononciation varie en fonction de la syllabe qui le suit.
+        </p>
+    </div>
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        Hiragana</a>
+      </h4>
+    </div>
+       <div id="collapse1" class="panel-collapse collapse in">
+      <div class="panel-body">
+        
+           <img src="{{asset('/css/hiragana.png')}}" class="img-responsive" > 
+          
+           
+      </div>
+       </div>
+           
+  </div>
+</div>
+           <div>
+               <p>
+                   Les katakanas sont les éléments d'un des trois ensembles de caractères de l'écriture japonaise avec les kanjis et les hiraganas.
+
+Les katakanas (片仮名?, lit. « kanas fragmentaires ») sont un des deux syllabaires utilisés en japonais. Comme les hiraganas – l'autre syllabaire – les katakanas sont des signes correspondant à des syllabes (ka, ki, ku, ke, ko, etc.). Ils sont utilisés dans le système d'écriture japonais pour transcrire les mots étrangers, les noms propres étrangers, les noms scientifiques des plantes et animaux, et les onomatopées japonaises. Ils peuvent également servir à mettre en valeur dans un texte des mots qui s'écrivent normalement en kanjis ou en hiraganas.
+               </p>
+           </div>
+   
+           <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                  Katakana</a>
+                </h4>
+    </div>
+           <div id="collapse2" class="panel-collapse collapse in">
+            <div class="panel-body">
+                <img src="{{asset('/css/katakana.png')}}" class="img-responsive" > 
+            </div>
+       </div>
+            </div>
+           </div>
+            <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="paenl-heading">
+                <h4 class="panel-title">
+                  <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                  Kanji</a>
+                </h4>
+    </div>
+           <div id="collapse3" class="panel-collapse collapse in">
+            <div class="panel-body">
+                <h1> En construction...</h1>
+            </div>
+       </div>
+            </div>
+           </div>
+</div>
+ {%endblock%} 

@@ -1,0 +1,14 @@
+{% extends 'layout.html.twig'%}
+
+{%block body%}
+    {{parent()}}
+    <div>
+        <form method="post">
+        {% block table %}
+            {{ form(form)}}
+        {%endblock %} 
+        
+        
+        </form>
+    </div>
+{%endblock%}

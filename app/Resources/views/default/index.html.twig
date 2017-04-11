@@ -1,0 +1,75 @@
+{% extends 'layout.html.twig'%}
+
+    {%block body%}
+        
+            {{parent()}}
+     
+        <div>
+           
+       <form class="navbar-form " method="get" action="index" >
+            <input type="text" class="form-control" placeholder="Entrez un mot ou une phrase"
+                    name="ph" >
+        
+        <button type="submit" class="btn btn-info">
+            <span class="glyphicon glyphicon-search"></span> Rechercher
+        </button>
+        </form>
+            <div>
+                {% if app.user is null %}
+                    {%else%}
+                        <a href="{{path('addPhrase')}}" class="btn btn-info" role="button">
+                        <span class="glyphicon glyphicon-plus-sign"></span> Ajouter un exemple</a>
+                
+                {%endif%}
+            </div>
+        </div>
+    
+               
+        {% block container %}   
+
+             <ul>
+
+            {% for phrase in resultPhrases %} 
+                {% if app.user is null %}
+                    <li>{{phrase.phrase}}</li>
+                    <li>{{phrase.phraseJap}}</li>
+                    
+                 {%else%}
+                    <li>{{phrase.phrase}}</li>
+                    <li>{{phrase.phraseJap}}</li>
+                    
+                    <a href="{{path('update',{'id':phrase.id})}}" class="btn btn-info" role="button">
+                        <span class="glyphicon glyphicon-plus-sign"></span> Modifier</a>
+                 {%endif%}
+             {% endfor %}
+             
+             </ul>
+             {% if resultPhrases is null %}
+             
+                 
+             {%else%}
+                <div class="navigation text-center">
+                    {{ knp_pagination_render(resultPhrases) }}
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                
+             {%endif%}
+             <nav class="navbar  navbar-default navbar-fixed-bottom"id="footer">
+            <div class="container">
+                <p>footer</p>
+            </div>
+</nav>
+         {% endblock %}
+     
+         
+    {% endblock %}
+    
+
+        
+     
+
+
+   
+  

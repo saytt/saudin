@@ -1,0 +1,24 @@
+{% extends 'layout.html.twig' %}
+
+{% block body %}
+    {{parent()}}
+
+    {% block h1 %}
+        {% if app.session.flashBag.has('success') %}
+            <div class="alert alert-success">
+                {% for msg in app.session.flashBag.get('success') %}
+                    {{ msg }}
+                {% endfor %}
+            </div>
+        {% endif %}
+        Ajout d'un exemple
+    {% endblock %}
+    {% block p %}
+
+    {% endblock %}
+    {% block table %}
+        <div class="table-custom">
+            {{ form(form) }}
+        </div>
+    {% endblock %}    
+{% endblock %}
